@@ -189,7 +189,7 @@ function createItems() {
 
         // יצירת תגיות מתאימות על פי המבנה של בוטסטראפ והוספת המחלקות הרלוונטיות
         const aspectImage = document.createElement('img');
-        aspectImage.src = `../images/${aspect.pic}`;
+        aspectImage.src = `images/${aspect.pic}`;
         aspectImage.classList.add("card-img-top");
 
         const cardBody = document.createElement('div');
