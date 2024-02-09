@@ -1,0 +1,263 @@
+:root {
+  font-size: 14px;
+}
+
+.hide {
+  display: none !important;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+video,
+img,
+canvas {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+header {
+  height: 13rem;
+  background-image: url("../images/gamification-3d-rendering-concept.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 1rem;
+  /* החשכת תמונת הנושא */
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile nav setting */
+.flex-container-nav {
+  display: flex;
+  gap: 1.5rem;
+  padding: 20px;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  list-style: none;
+  z-index: 10;
+}
+
+.flex-container-nav a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: black;
+}
+
+.btn-mobile {
+  display: flex;
+}
+
+#nav-button {
+  color: white;
+}
+
+#close-nav-button {
+  max-width: 40%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.flex-container-nav .selected {
+  text-decoration: underline;
+}
+
+.flex-container-nav.hide-mobile {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 2rem;
+  color: white;
+}
+
+/* תיבת החיפוש */
+/* יישור התיבה לאמצע */
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.3rem;
+}
+
+/* מעטפת נוספת לתיבת הטקסט והכפתור */
+.searchWrapper {
+  position: relative;
+  width: 80%;
+}
+
+/* עיצוב תיבת הטקסט */
+#searchbox {
+  border: 0;
+  border-radius: 25px;
+  padding: 0.25rem 1rem;
+  width: 100%;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+#searchbox:focus {
+  outline-color: #8d80a9;
+  outline-width: 1px;
+}
+
+/* עיצוב כפתור החיפוש */
+#searchButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* Make the button the same height as the input field */
+  padding: 0.25rem;
+  text-align: center;
+  border-radius: 25px;
+}
+
+
+/* הגדרות מובייל לקונטיינר של הכרטיסיות */
+#itemsContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 20px;
+}
+
+#itemsContainer>p {
+  text-align: center;
+}
+
+/* עיצוב הכרטיסיה */
+.card {
+  width: 80%;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+  border: 0;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.card-img-top {
+  height: auto;
+  max-width: 50%;
+}
+
+.card-body h5 {
+  margin: 1rem;
+  font-size: 14pt;
+  text-align: center;
+}
+
+.card-body button {
+  /* יישור הכפתור לשמאל */
+  float: left;
+}
+
+/* עיצוב המודל */
+#myModal {
+  /* הוספת טשטוש לרקע */
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  border: 0;
+}
+
+.modal-header {
+  background-color: #8d80a9;
+  color: white;
+}
+
+.modal-body p {
+  padding: 0 4rem;
+  /* text-align: justify; */
+}
+
+
+/* הגדרות נוספות במובייל */
+@media only screen and (max-width: 599px) {
+
+  /* תפריט הניווט הפתוח */
+  .flex-container-nav {
+    padding: 40px 20px 20px 20px;
+    background-color: white;
+    box-shadow: rgba(136,
+        165,
+        191,
+        0.48) -1.95px 1.95px 5px;
+    border-bottom-left-radius: 0.375rem;
+  }
+
+  /* הקטנת האייקון בכפתור חיפוש */
+  #searchButton span {
+    font-size: 20px;
+  }
+}
+
+/* Computer screen setting */
+@media only screen and (min-width: 600px) {
+  :root {
+    font-size: 16px;
+  }
+
+  header {
+    height: 15rem;
+  }
+
+  /* תפריט הניווט במסך מחשב יוצג בשורה */
+  .flex-container-nav {
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    background: none;
+  }
+
+  /* ביטול ההסתרה שלו */
+  .flex-container-nav.hide-mobile {
+    display: flex;
+  }
+
+  .flex-container-nav a {
+    font-size: 0.9rem;
+    color: white;
+  }
+
+  /* הסתרת כפתור תפריט ההמבורגר */
+  .btn-mobile {
+    display: none;
+  }
+
+  /* שינוי גודל תיבת החיפוש */
+  .searchWrapper {
+    width: 532px;
+  }
+
+  /* הצגת הכרטיסיות בשורה */
+  #itemsContainer {
+    /* שימוש בגריד לסידור הכרטיסיות בצורה שווה על המסך */
+    display: grid;
+    /* הגדרת התבנית של הכרטיסיות - חזרה מספר פעמים שנכנס בשורה תוך שמירה על גודלן המקורי */
+    grid-template-columns: repeat(auto-fit, minmax(16rem, max-content));
+    /* ריווחים בין הכרטיסיות */
+    grid-gap: 20px;
+    /* יישור למרכז */
+    justify-content: center;
+  }
+
+  .card {
+    width: 16rem;
+  }
+
+}
